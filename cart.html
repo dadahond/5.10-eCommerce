@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <link rel="stylesheet" href="./src/output.css" />
-</head>
+  </head>
 
-<body>
-    <header class="bg-base-200">
-        <div class="align-elements navbar">
-            <div class="navbar-start">
-                <a class="btn btn-secondary text-2xl hidden md:flex" href="./index.html">FN28</a
+  <body>
+    <header class="mb-20 bg-base-200">
+      <div class="align-elements navbar">
+        <div class="navbar-start">
+          <a
+            class="btn btn-secondary text-2xl hidden md:flex"
+            href="./index.html"
+            >FN28</a
           >
           <div class="dropdown md:hidden">
             <div
@@ -28,37 +35,37 @@
             >
               <li>
                 <a href="">Home</a>
-                </li>
-                <li>
-                    <a href="">About</a>
-                </li>
-                <li>
-                    <a href="">Contact</a>
-                </li>
-                <li>
-                    <a href="">Cart</a>
-                </li>
-                </ul>
-            </div>
+              </li>
+              <li>
+                <a href="">About</a>
+              </li>
+              <li>
+                <a href="">Contact</a>
+              </li>
+              <li>
+                <a href="">Cart</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="navbar-center">
-            <ul class="menu menu-horizontal hidden md:flex">
-                <li>
-                    <a href="">Home</a>
-                </li>
-                <li>
-                    <a href="">About</a>
-                </li>
-                <li>
-                    <a href="">Contact</a>
-                </li>
-                <li>
-                    <a href="">Cart</a>
-                </li>
-            </ul>
+          <ul class="menu menu-horizontal hidden md:flex">
+            <li>
+              <a href="">Home</a>
+            </li>
+            <li>
+              <a href="">About</a>
+            </li>
+            <li>
+              <a href="">Contact</a>
+            </li>
+            <li>
+              <a href="">Cart</a>
+            </li>
+          </ul>
         </div>
         <div class="navbar-end">
-            <label class="swap swap-rotate">
+          <label class="swap swap-rotate">
             <!-- this hidden checkbox controls the state -->
             <input id="toggle-mode" type="checkbox" />
 
@@ -85,9 +92,79 @@
             </svg>
           </label>
         </div>
-        </div>
+      </div>
     </header>
+    <main>
+      <section class="products-container">
+        <div class="align-elements">
+          <div class="overflow-x-auto">
+            <table class="table">
+              <!-- head -->
+              <thead>
+                <tr>
+                  <th class="font-bold text-slate-500 text-lg">Photo</th>
+                  <th class="font-bold text-slate-500 text-lg">Price</th>
+                  <th class="font-bold text-slate-500 text-lg">Amount:</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- row 1 -->
+                <template id="tr-template">
+                  <tr>
+                    <td>
+                      <div class="flex items-center gap-3">
+                        <div class="avatar">
+                          <div class="mask mask-squircle h-16 w-16">
+                            <img
+                              src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                              alt="Avatar Tailwind CSS Component"
+                            />
+                          </div>
+                        </div>
+                        <a href="">
+                          <div>
+                            <div class="font-bold title text-lg">
+                              Hart Hagerty
+                            </div>
+                            <div class="text-sm opacity-50 brand">
+                              United States
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </td>
+                    <td><h3 class="text-xl font-medium price"></h3></td>
+                    <td>
+                      <div class="flex items-center gap-3">
+                        <button class="incrementItem text-xl font-bold btn-sm">
+                          &plus;
+                        </button>
+                        <p class="text-2xl amount">3</p>
+                        <button class="decrementItem text-xl font-bold btn-sm">
+                          &minus;
+                        </button>
+                      </div>
+                    </td>
+                    <th>
+                      <button
+                        class="decrementItem btn btn-secondary btn-sm delete-btn"
+                      >
+                        Delete
+                      </button>
+                    </th>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
     <script type="module" src="./js/cart.js"></script>
-</body>
-
+  </body>
 </html>
