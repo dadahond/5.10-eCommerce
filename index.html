@@ -3,20 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>eCommerce</title>
+    <title>itUzum</title>
+    <!-- toastify -->
     <link
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
     />
+    <!-- font awesome -->
     <link rel="stylesheet" href="./src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
 
   <body>
     <header class="bg-base-200 mb-20">
       <div class="align-elements navbar">
         <div class="navbar-start">
-          <a class="btn btn-secondary text-2xl hidden md:flex" href="">FN28</a>
+          <a class="btn btn-secondary text-2xl hidden md:flex" href=""
+            >itUzum</a
+          >
           <div class="dropdown md:hidden">
             <div
               tabindex="0"
@@ -47,20 +55,28 @@
         <div class="navbar-center">
           <ul class="menu menu-horizontal hidden md:flex">
             <li>
-              <a href="./index.html">Home</a>
+              <a class="text-lg" href="./index.html">Home</a>
             </li>
             <li>
-              <a href="">About</a>
+              <a class="text-lg" href="">About</a>
             </li>
             <li>
-              <a href="">Contact</a>
-            </li>
-            <li>
-              <a href="./cart.html">Cart</a>
+              <a class="text-lg" href="">Contact</a>
             </li>
           </ul>
         </div>
         <div class="navbar-end">
+          <!-- cart icon -->
+          <div class="indicator gap-5">
+            <span class="indicator-item badge badge-secondary mt-3" id="basket"
+              >0</span
+            >
+            <button class="btn">
+              <a href="./cart.html"
+                ><i class="fa-solid fa-cart-shopping"></i
+              ></a>
+            </button>
+          </div>
           <label class="swap swap-rotate">
             <!-- this hidden checkbox controls the state -->
             <input id="toggle-mode" type="checkbox" />

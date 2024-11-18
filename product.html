@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product</title>
     <link rel="stylesheet" href="./src/output.css" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
 
-  <body>
+  <body class="font-sans">
     <header class="mb-20 bg-base-200">
       <div class="align-elements navbar">
         <div class="navbar-start">
@@ -37,25 +43,19 @@
               <li>
                 <a href="">Contact</a>
               </li>
-              <li>
-                <a href="">Cart</a>
-              </li>
             </ul>
           </div>
         </div>
         <div class="navbar-center">
           <ul class="menu menu-horizontal hidden md:flex">
             <li>
-              <a href="">Home</a>
+              <a class="text-lg" href="./index.html">Home</a>
             </li>
             <li>
-              <a href="">About</a>
+              <a class="text-lg" href="">About</a>
             </li>
             <li>
-              <a href="">Contact</a>
-            </li>
-            <li>
-              <a href="">Cart</a>
+              <a class="text-lg" href="">Contact</a>
             </li>
           </ul>
         </div>
@@ -89,7 +89,66 @@
         </div>
       </div>
     </header>
-    <main></main>
+    <main>
+      <section>
+        <div class="align-elements font-mono">
+          <h1
+            id="title"
+            class="text-2xl text-center text-accent font-bold my-2 p-5 rounded-md"
+          ></h1>
+          <div
+            id="carousel"
+            class="carousel rounded-box h-96 flex justify-center container bg-base-200"
+          >
+            <img src="" alt="" id="thumbnail" class="" />
+          </div>
+          <div class="md:flex-col">
+            <div class="my-5">
+              <p></p>
+              <q id="description" class="p-3 rounded-md text-lg"></q>
+            </div>
+            <div class="md:flex justify-evenly">
+              <div class="flex items-center my-5">
+                <p class="pr-3">
+                  Brand:<i class="fa-regular fa-copyright"></i>
+                </p>
+                <h2 id="brand" class="text-xl font-semibold"></h2>
+              </div>
+              <div class="flex gap-2 items-center my-5">
+                <p>Category:<i class="fa-solid fa-layer-group"></i></p>
+                <h2 id="category" class="text-xl font-semibold capitalize"></h2>
+              </div>
+              <div class="flex items-center my-5">
+                <p class="pr-3">Rating:</p>
+                <h2 id="rating" class="text-xl font-semibold"></h2>
+                <p class="text-xl font-medium"><i class="fas fa-star"></i></p>
+              </div>
+              <div class="flex items-center my-5">
+                <p class="pr-3">Discount:<i class="fa-solid fa-tag"></i></p>
+                <h2 id="discountPercentage" class="text-xl font-semibold"></h2>
+                <p class="font-semibold text-xl">%</p>
+              </div>
+              <div class="flex items-center my-5">
+                <p class="pr-3">Price:</p>
+                <p class="text-xl font-semibold">
+                  <i class="fa-solid fa-dollar-sign"></i>
+                </p>
+                <h2 id="price" class="text-xl font-semibold"></h2>
+              </div>
+            </div>
+          </div>
+
+          <template id="carousel-item">
+            <div class="carousel-item max-w-full">
+              <img src="" class="w-full" />
+            </div>
+          </template>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal yoki ma’lumotlarni ko‘rsatish uchun joy -->
+
     <!-- LOADER -->
     <div
       id="loader"

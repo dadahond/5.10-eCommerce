@@ -40,9 +40,52 @@ export const updateHomeUI = ({ products }) => {
     button.addEventListener("click", stopNavigation);
   });
 };
-export const updateProductUI = () => {};
+const titleEl = document.getElementById("title");
+const categoryEl = document.getElementById("category");
+const priceEl = document.getElementById("price");
+const descriptionEl = document.getElementById("description");
+const discountPercentageEl = document.getElementById("discountPercentage");
+const thumbnailEl = document.getElementById("thumbnail");
+const carousel = document.getElementById("carousel");
+const carouselItemTemp = document.getElementById("carousel-item");
+const ratingEl = document.getElementById("rating");
+const brandEl = document.getElementById("brand");
+
+export const updateProductUI = (product) => {
+  const {
+    title,
+    description,
+    thumbnail,
+    images,
+    category,
+    price,
+    discountPercentage,
+    rating,
+    brand,
+  } = product;
+  titleEl.textContent = title;
+  descriptionEl.textContent = description;
+  priceEl.textContent = price;
+  ratingEl.textContent = rating;
+  discountPercentageEl.textContent = discountPercentage;
+  priceEl.textContent = price;
+  categoryEl.textContent = category;
+  brandEl.textContent = brand;
+
+  if (images.length > 1) {
+    images.forEach((imgSrc) => {
+      const clone = carouselItemTemp.content.cloneNode(true);
+      const image = clone.querySelector("img");
+      image.src = imgSrc;
+      carousel.appendChild(clone);
+    });
+  } else {
+    thumbnailEl.src = thumbnail;
+  }
+};
 
 import { formatNumber } from "./formatNumber.js";
+import { toast } from "./toast.js";
 export const updateTbodyUI = (products) => {
   tbody.innerHTML = "";
   products.forEach((product) => {
@@ -61,7 +104,7 @@ export const updateTbodyUI = (products) => {
     brandEl.textContent = `Brand: ${brand}`;
     titleEl.textContent = `${title}`;
     priceEl.textContent = `${formatNumber(price)}`;
-    amountEl.textContent = amount;
+    amountEl.value = amount;
     deleteBtn.setAttribute("data-id", id);
     incrementItemEl.setAttribute("data-id", id);
     decrementItemEl.setAttribute("data-id", id);
@@ -73,6 +116,10 @@ export const updateTbodyUI = (products) => {
 
     incrementItemEl.addEventListener("click", (e) => {
       currentAmount++;
+      if (currentAmount > 9) {
+        alert("Mahsulot soni cheklangan");
+        return;
+      }
       amountEl.textContent = currentAmount;
       updateAmount(e, currentAmount);
     });

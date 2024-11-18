@@ -4,12 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
+    <!-- toastify -->
     <link
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
     />
     <link rel="stylesheet" href="./src/output.css" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -51,20 +58,26 @@
         <div class="navbar-center">
           <ul class="menu menu-horizontal hidden md:flex">
             <li>
-              <a href="">Home</a>
+              <a class="text-lg" href="./index.html">Home</a>
             </li>
             <li>
-              <a href="">About</a>
+              <a class="text-lg" href="">About</a>
             </li>
             <li>
-              <a href="">Contact</a>
-            </li>
-            <li>
-              <a href="">Cart</a>
+              <a class="text-lg" href="">Contact</a>
             </li>
           </ul>
         </div>
         <div class="navbar-end">
+          <!-- cart icon -->
+          <div class="indicator gap-5">
+            <span class="indicator-item badge badge-secondary mt-3" id="basket"
+              >0</span
+            >
+            <button class="btn">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
           <label class="swap swap-rotate">
             <!-- this hidden checkbox controls the state -->
             <input id="toggle-mode" type="checkbox" />
@@ -134,13 +147,19 @@
                         </a>
                       </div>
                     </td>
-                    <td><h3 class="text-xl font-medium price"></h3></td>
+                    <td>
+                      <h3 class="text-xl font-medium price"></h3>
+                    </td>
                     <td>
                       <div class="flex items-center gap-3">
                         <button class="incrementItem text-xl font-bold btn-sm">
                           &plus;
                         </button>
-                        <p class="text-2xl amount">3</p>
+                        <!-- <p class="text-2xl amount">3</p> -->
+                        <input
+                          type="text"
+                          class="input input-bordered input-success max-w-12 amount"
+                        />
                         <button class="decrementItem text-xl font-bold btn-sm">
                           &minus;
                         </button>
@@ -156,6 +175,14 @@
                   </tr>
                 </template>
               </tbody>
+              <tfoot>
+                <tr>
+                  <div class="flex justify-end text-lg gap-4">
+                    <p class="font-bold text-slate-700">Total:</p>
+                    <span id="totalAll" class="font-bold">0</span>
+                  </div>
+                </tr>
+              </tfoot>
             </table>
           </div>
         </div>
