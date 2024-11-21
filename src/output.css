@@ -2310,10 +2310,6 @@ html {
   margin: 0.25rem;
 }
 
-.m-auto {
-  margin: auto;
-}
-
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -2322,21 +2318,6 @@ html {
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
-}
-
-.my-10 {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
 }
 
 .mb-20 {
@@ -2375,8 +2356,8 @@ html {
   height: 24rem;
 }
 
-.h-auto {
-  height: auto;
+.h-lvh {
+  height: 100lvh;
 }
 
 .w-16 {
@@ -2391,52 +2372,16 @@ html {
   width: 1.75rem;
 }
 
-.w-96 {
-  width: 24rem;
-}
-
 .w-full {
   width: 100%;
-}
-
-.w-1\/2 {
-  width: 50%;
 }
 
 .max-w-12 {
   max-width: 3rem;
 }
 
-.max-w-96 {
-  max-width: 24rem;
-}
-
 .max-w-full {
   max-width: 100%;
-}
-
-.max-w-5xl {
-  max-width: 64rem;
-}
-
-.max-w-2xl {
-  max-width: 42rem;
-}
-
-.max-w-xl {
-  max-width: 36rem;
-}
-
-.max-w-lg {
-  max-width: 32rem;
-}
-
-.max-w-md {
-  max-width: 28rem;
-}
-
-.max-w-xs {
-  max-width: 20rem;
 }
 
 .grid-cols-1 {
@@ -2471,16 +2416,16 @@ html {
   justify-content: space-between;
 }
 
-.justify-around {
-  justify-content: space-around;
-}
-
 .justify-evenly {
   justify-content: space-evenly;
 }
 
 .gap-10 {
   gap: 2.5rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .gap-3 {
@@ -2495,22 +2440,8 @@ html {
   gap: 1.25rem;
 }
 
-.gap-2 {
-  gap: 0.5rem;
-}
-
-.space-x-4 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(1rem * var(--tw-space-x-reverse));
-  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
 .overflow-x-auto {
   overflow-x: auto;
-}
-
-.rounded {
-  border-radius: 0.25rem;
 }
 
 .rounded-box {
@@ -2531,39 +2462,9 @@ html {
   background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
 }
 
-.bg-base-300 {
-  --tw-bg-opacity: 1;
-  background-color: var(--fallback-b3,oklch(var(--b3)/var(--tw-bg-opacity)));
-}
-
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-neutral {
-  --tw-bg-opacity: 1;
-  background-color: var(--fallback-n,oklch(var(--n)/var(--tw-bg-opacity)));
-}
-
-.bg-secondary {
-  --tw-bg-opacity: 1;
-  background-color: var(--fallback-s,oklch(var(--s)/var(--tw-bg-opacity)));
-}
-
-.bg-slate-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
-}
-
-.bg-red-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
-}
-
-.bg-red-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 242 242 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-60 {
@@ -2574,21 +2475,16 @@ html {
   fill: currentColor;
 }
 
-.object-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .p-2 {
   padding: 0.5rem;
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
 .p-3 {
   padding: 0.75rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .pr-3 {
@@ -2603,10 +2499,6 @@ html {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-.font-serif {
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-}
-
 .font-sans {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -2614,11 +2506,6 @@ html {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .text-lg {
@@ -2636,6 +2523,21 @@ html {
   line-height: 1.75rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -2648,21 +2550,18 @@ html {
   font-weight: 600;
 }
 
-.uppercase {
-  text-transform: uppercase;
-}
-
 .capitalize {
   text-transform: capitalize;
 }
 
-.italic {
-  font-style: italic;
+.text-accent {
+  --tw-text-opacity: 1;
+  color: var(--fallback-a,oklch(var(--a)/var(--tw-text-opacity)));
 }
 
-.text-red-600 {
+.text-red-500 {
   --tw-text-opacity: 1;
-  color: rgb(220 38 38 / var(--tw-text-opacity));
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .text-slate-500 {
@@ -2673,50 +2572,6 @@ html {
 .text-slate-700 {
   --tw-text-opacity: 1;
   color: rgb(51 65 85 / var(--tw-text-opacity));
-}
-
-.text-slate-400 {
-  --tw-text-opacity: 1;
-  color: rgb(148 163 184 / var(--tw-text-opacity));
-}
-
-.text-slate-600 {
-  --tw-text-opacity: 1;
-  color: rgb(71 85 105 / var(--tw-text-opacity));
-}
-
-.text-amber-950 {
-  --tw-text-opacity: 1;
-  color: rgb(69 26 3 / var(--tw-text-opacity));
-}
-
-.text-primary-content {
-  --tw-text-opacity: 1;
-  color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
-}
-
-.text-secondary-content {
-  --tw-text-opacity: 1;
-  color: var(--fallback-sc,oklch(var(--sc)/var(--tw-text-opacity)));
-}
-
-.text-gray-400 {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-
-.text-gray-600 {
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
-}
-
-.text-accent {
-  --tw-text-opacity: 1;
-  color: var(--fallback-a,oklch(var(--a)/var(--tw-text-opacity)));
-}
-
-.line-through {
-  text-decoration-line: line-through;
 }
 
 .opacity-50 {
@@ -2735,6 +2590,39 @@ html {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.hover\:text-9xl:hover {
+  font-size: 8rem;
+  line-height: 1;
+}
+
+.hover\:text-3xl:hover {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.hover\:text-green-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
+}
+
+.hover\:text-orange-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(249 115 22 / var(--tw-text-opacity));
+}
+
+.hover\:text-blue-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
@@ -2748,17 +2636,17 @@ html {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .md\:flex-row {
-    flex-direction: row;
-  }
-
   .md\:flex-col {
     flex-direction: column;
   }
-}
 
-@media (min-width: 1024px) {
-  .lg\:flex {
-    display: flex;
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:hover\:text-9xl:hover {
+    font-size: 8rem;
+    line-height: 1;
   }
 }

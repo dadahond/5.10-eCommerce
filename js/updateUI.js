@@ -99,7 +99,10 @@ export const updateTbodyUI = (products) => {
     const deleteBtn = clone.querySelector(".delete-btn");
     const incrementItemEl = clone.querySelector(".incrementItem");
     const decrementItemEl = clone.querySelector(".decrementItem ");
+    const a = clone.querySelector("a");
+    const inputEl = clone.querySelector(".input");
 
+    a.href = `./product.html?id=${id}`;
     image.src = thumbnail;
     brandEl.textContent = `Brand: ${brand}`;
     titleEl.textContent = `${title}`;
@@ -109,15 +112,20 @@ export const updateTbodyUI = (products) => {
     incrementItemEl.setAttribute("data-id", id);
     decrementItemEl.setAttribute("data-id", id);
 
+    inputEl.addEventListener("input", (e) => {
+      currentAmount = e.target.value;
+    });
+
+    let currentAmount = product.amount;
+
     deleteBtn.addEventListener("click", (e) => {
       deleteElement(e);
     });
-    let currentAmount = product.amount;
 
     incrementItemEl.addEventListener("click", (e) => {
       currentAmount++;
       if (currentAmount > 9) {
-        alert("Mahsulot soni cheklangan");
+        toast("warning", "Mahsulot soni cheklangan");
         return;
       }
       amountEl.textContent = currentAmount;
